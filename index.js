@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
-const multer = require("multer");
 
 const app = express();
 const PORT = 3000;
@@ -11,17 +10,6 @@ app.set("views", path.join(__dirname, "views"));
 app.use(expressLayouts);
 app.use(express.static("public"));
 
-const storage = multer.diskStorage({
-  destination: "./uploads/",
-  filename: (req, file, cb) => {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
-const upload = multer({ storage: storage });
-
 app.get("/", (req, res) => {
   res.render("home", {
     title: "Home",
@@ -30,19 +18,26 @@ app.get("/", (req, res) => {
     noLayout: true,
   });
 });
-
 app.get("/restaurants", (req, res) => {
   res.render("restaurants", {
-    title: "About",
-    data: "About Us Page",
+    title: "Restaurants",
+    data: "Restaurants Page",
+    currentRoute: req.url,
+    noLayout: true,
+  });
+});
+app.get("/menu", (req, res) => {
+  res.render("browse_menu", {
+    title: "Browse Menu",
+    data: "Browse Menu Page",
     currentRoute: req.url,
     noLayout: true,
   });
 });
 app.get("/login", (req, res) => {
   res.render("login", {
-    title: "About",
-    data: "About Us Page",
+    title: "Login",
+    data: "User Login Page",
     currentRoute: req.url,
     noLayout: false,
   });
