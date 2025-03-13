@@ -1,0 +1,52 @@
+<section class="flex flex-col lg:flex-row p-10 bg-gray-100 border border-gray-300 rounded-lg mx-5 relative">
+  <!-- Hero Content -->
+  <div class="flex-1 space-y-6 lg:ml-10">
+    <div class="text-gray-900">
+      <p class="text-lg">Order Restaurant food, takeaway and groceries.</p>
+      <h1 class="text-5xl font-semibold leading-tight">
+        Feast Your Senses, <br /><span class="text-orange-500">Fast and Fresh</span>
+      </h1>
+    </div>
+
+    <!-- Search Container -->
+    <div class="flex flex-col gap-3">
+      <label for="search" class="text-sm text-gray-600">Enter a postcode to see what we deliver</label>
+      <div class="flex w-[400px] border border-gray-300 rounded-full overflow-hidden">
+        <input type="text" id="search" placeholder="e.g. EC4R 3TE" class="flex-1 p-3 outline-none">
+        <button type="button" class="bg-orange-500 text-white px-6 py-3 font-bold rounded-r-full hover:bg-orange-600">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Image with Order Notifications -->
+  <div class="relative flex-1 flex justify-center items-center">
+    <!-- Orange Background -->
+    <div class="absolute top-0 left-[12%] w-[600px] h-[700px] bg-orange-500 rounded-tl-[50%] z-0"></div>
+
+    <!-- Hero Image -->
+    <div class="relative z-10 flex flex-col items-center">
+      <img src="/assets/Untitled-2 1.png" alt="Girl eating pizza" class="w-[350px] rounded-lg shadow-lg mt-20">
+
+      <!-- Notification Cards -->
+      <div class="absolute top-[10%] right-[30%] bg-white shadow-md rounded-lg p-4 w-[250px] text-sm space-y-1">
+        <img src="/assets/LOGO 1.png" alt="logo" class="w-10">
+        <p class="font-semibold text-gray-800">We’ve Received your order!</p>
+        <span class="text-gray-500 text-xs">Awaiting Restaurant acceptance</span>
+      </div>
+
+      <div class="absolute top-[35%] right-[80px] bg-white shadow-md rounded-lg p-4 w-[250px] text-sm space-y-1">
+        <img src="/assets/LOGO 1.png" alt="logo" class="w-10">
+        <p class="font-semibold text-gray-800">Order Accepted! ✔️</p>
+        <span class="text-gray-500 text-xs">Your order will be delivered shortly</span>
+      </div>
+
+      <div class="absolute top-[60%] right-[100px] bg-white shadow-md rounded-lg p-4 w-[250px] text-sm space-y-1">
+        <img src="/assets/LOGO 1.png" alt="logo" class="w-10">
+        <p class="font-semibold text-gray-800">Your rider's nearby! 🎉</p>
+        <span class="text-gray-500 text-xs">They’re almost there – get ready!</span>
+      </div>
+    </div>
+  </div>
+</section>
