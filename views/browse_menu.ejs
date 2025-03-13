@@ -13,11 +13,6 @@
     <% deals.forEach(deal => { %>
       <div class="relative rounded-xl overflow-hidden">
         <img src="<%= deal.img %>" alt="<%= deal.name %>" class="w-full h-full object-cover">
-        <!-- <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full h-full flex flex-col justify-end">
-          <span class="bg-orange-500 px-2 py-1 rounded-md text-sm font-bold"><%= deal.discount %></span>
-          <p class="text-yellow-400 text-sm">Restaurant</p>
-          <h3 class="text-lg font-bold"><%= deal.name %></h3>
-        </div> -->
       </div>
     <% }) %>
   </div>
@@ -26,19 +21,21 @@
   <h2 class="text-2xl font-bold mt-10">Order.uk Popular Categories 🤩</h2>
   <div class="grid grid-cols-6 gap-4 mt-6">
     <% let categories = [
-      { name: "Burgers & Fast food", count: 21, img: "/assets/burger-category.jpg" },
-      { name: "Fries", count: 32, img: "/assets/fries.jpg" },
-      { name: "Drinks", count: 4, img: "/assets/drinks.jpg" },
-      { name: "Pizza", count: 32, img: "/assets/pizza.jpg" },
-      { name: "Breakfast", count: 4, img: "/assets/breakfast.jpg" },
-      { name: "Soups", count: 32, img: "/assets/soups.jpg" }
+      { name: "Burgers & Fast food", count: 21, img: "/assets/burger.png" },
+      { name: "Fries", count: 32, img: "/assets/fries.png" },
+      { name: "Drinks", count: 4, img: "/assets/drinks.png" },
+      { name: "Pizza", count: 32, img: "/assets/pizza.png" },
+      { name: "Breakfast", count: 4, img: "/assets/breakfast.png" },
+      { name: "Soups", count: 32, img: "/assets/soup.png" }
     ]; %>
 
     <% categories.forEach(category => { %>
-      <div class="bg-gray-100 p-4 rounded-xl text-center shadow">
-        <img src="<%= category.img %>" alt="<%= category.name %>" class="w-full h-32 object-cover rounded-lg">
-        <h3 class="font-bold text-lg mt-2"><%= category.name %></h3>
-        <p class="text-gray-500 text-sm"><%= category.count %> Restaurants</p>
+      <div class="bg-gray-100 rounded-xl text-center shadow">
+        <img src="<%= category.img %>" alt="<%= category.name %>" class="w-full h-44 object-cover rounded-lg">
+        <div class="p-4">
+          <h3 class="font-bold text-lg mt-2"><%= category.name %></h3>
+          <p class="text-gray-500 text-sm"><%= category.count %> Restaurants</p>
+        </div>
       </div>
     <% }) %>
   </div>
