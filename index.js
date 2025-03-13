@@ -21,33 +21,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.get("/", (req, res) => {
-  res.render("home", { title: "Home", data: "Welcome to the Home Page" });
+  res.render("home", { title: "Home", data: "Welcome to the Home Page", currentRoute: req.url });
 });
 
 app.get("/restaurants", (req, res) => {
-  res.render("restaurants", { title: "About", data: "About Us Page" });
-});
-
-app.get("/contact", (req, res) => {
-  res.render("contact", { title: "Contact", data: "Contact Us Page" });
-});
-
-app.get("/profile", (req, res) => {
-  res.render("profile", { title: "Profile", data: "Your Profile Page" });
-});
-
-app.get("/settings", (req, res) => {
-  res.render("settings", { title: "Settings", data: "Settings Page" });
-});
-app.get("/form", (req, res) => {
-  res.render("form", { title: "Form", data: "Upload a file" });
-});
-
-app.post("/upload", upload.single("file"), (req, res) => {
-  if (!req.file) {
-    return res.send("Please upload a file.");
-  }
-  res.send(`File uploaded successfully: <b>${req.file.filename}</b>`);
+  res.render("restaurants", { title: "About", data: "About Us Page", currentRoute: req.url });
 });
 
 app.listen(PORT, () => {
