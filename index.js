@@ -24,8 +24,8 @@ app.get("/", (req, res) => {
   res.render("home", { title: "Home", data: "Welcome to the Home Page" });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about", { title: "About", data: "About Us Page" });
+app.get("/restaurants", (req, res) => {
+  res.render("restaurants", { title: "About", data: "About Us Page" });
 });
 
 app.get("/contact", (req, res) => {
